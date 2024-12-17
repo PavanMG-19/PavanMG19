@@ -1,0 +1,145 @@
+/* General Footer Styles */
+.footer {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping of columns */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    background-color: #333333;
+    color: #ffffff;
+    padding: 40px 20px;
+    gap: 20px;
+    overflow: hidden; /* Prevent extra spacing issues */
+}
+
+.footer .column {
+    flex: 1 1 20%; /* All columns take equal space */
+    min-width: 200px;
+    max-width: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* Add right border to the Student Life & Support column */
+.footer .column:nth-child(3) {
+    border-right: 2px solid #00bcd4;
+}
+
+/* Heading Styles */
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* List and Link Styles */
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Address Section */
+.footer .column p {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+/* Social Media Icon Styles */
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white; /* White border */
+    border-radius: 50%; /* Circular icons */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: white; /* Highlight effect */
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.social-icons i {
+    font-size: 15px; /* Adjust icon size */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: #333333; /* Change icon color on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .footer {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .footer .column {
+        flex: 1 1 45%; /* Two columns per row on medium screens */
+        margin-bottom: 20px;
+    }
+
+    .footer .column:nth-child(3) {
+        border-right: 0px;
+        border-bottom: 2px solid #00bcd4;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer .column {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
+.footer-copyright {
+    background-color: #222222;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.footer-copyright p {
+    margin: 0;
+    color: #93a5a8;
+}
